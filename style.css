@@ -1,0 +1,22 @@
+body {
+   font-family: monospace, "Courier New", Courier;
+}
+
+div.box {
+   margin: 5px;
+   float: left;
+   padding: 0 0;
+}
+
+div.box2-outer {
+   width: 200px;
+   height: 100px;
+   float: left;
+}
+
+div.box2-inner {
+   width: 100px;
+   height: 50px;
+   margin: 25px 50px;
+   float: left;
+}
