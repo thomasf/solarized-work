@@ -7,7 +7,7 @@ parameters =
 
 hexToColor = (o) ->
 
-colors = 
+colors =
   base_light:
     fg:        0x839496
     bg:        0xfdf6e3
@@ -54,9 +54,9 @@ render = ->
 
   (j 'body').css {
     "background-color": base.bg.toString()
-    "color": colors.fg 
+    "color": colors.fg
     }
-    
+
 
   box = (bg, fg, title="TEXT", colorCode=false) ->
     if colorCode
@@ -92,24 +92,24 @@ render = ->
       box2 ccol, light
       c.append "</div>"
 
-    c.append "<div style='clear:both'>"      
+    c.append "<div style='clear:both'>"
     box colors.bg, normal , "#{name}..."
     box colors.bg, light , "Light.."
     box colors.bg, dark , "Dark..."
     c.append "</div>"
 
-    c.append "<div style='clear:both'>"          
+    c.append "<div style='clear:both'>"
     box light, normal, "Normal on light."
     box dark, normal, "Normal on dark."
     box normal, light, "Light on normal"
     box normal, dark, "Dark on normal"
     c.append "</div>"
 
-    c.append "<div style='clear:both'>"      
+    c.append "<div style='clear:both'>"
     box light, dark, "Dark on light", true
     box dark, light, "Light on dark", true
     c.append "</div>"
-    
+
 
     elisp = "#{elisp} (#{name}-d \"##{dark}\")<br>"
     elisp = "#{elisp} (#{name}-l \"##{light}\")<br>"
@@ -117,7 +117,7 @@ render = ->
     c.append '</div>'
 
    c.append "<div style='clear:both;'><h1>elisp:</h1><code>#{elisp}</code></div>"
-  
+
 
 
 render()
@@ -141,11 +141,4 @@ dispatcher =
     render()
 
 
-window.d = dispatcher   
-
-
-
-
-
-
-
+window.d = dispatcher
