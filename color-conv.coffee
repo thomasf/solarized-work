@@ -29,6 +29,30 @@ for listName, colorList of colors
     colorList[name] = new Hex(hex)
     console.log colorList, name, hex
 
+ac = colors.accent
+
+
+vc_colors = _.union ac.red,
+  ac.red.range(ac.yellow, 4),
+  ac.yellow,
+  ac.yellow.range(ac.green, 6),
+  ac.green,
+  ac.green.range(ac.cyan, 6),
+  ac.cyan,
+  ac.cyan.range(ac.blue, 5),
+  ac.blue
+
+n = 0
+vc_colors_string=""
+for i, c of vc_colors
+  n = n + 20
+  vc_colors_string += "(" + n + ' . "#' + c.toString() + '")'
+
+
+console.log vc_colors_string
+
+
+
 # Color transforms
 transform =
   brightness:
@@ -142,3 +166,8 @@ dispatcher =
 
 
 window.d = dispatcher
+
+
+# Local Variables:
+# eval: (coffee-cos-mode 1)
+# End:
